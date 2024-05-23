@@ -121,15 +121,15 @@ MonteCarlo( IN float* dbeforey, IN float* daftery, IN float* ddistx, OUT int* ds
 
 	// randomize everything:
 
-	float beforey = ?????
-	float aftery  = ?????
-	float distx   = ?????
+	float beforey = dbeforey;
+	float aftery  = daftery;
+	float distx   = ddistx;
 
-	float vx = ?????
-	float t  = ?????
-	float x  = ?????
+	float vx = sqrt(2.*GRAVITY*(beforey-aftery));
+	float t  = sqrt((2.*aftery)/GRAVITY);
+	float x  = vx * t;
 	if (fabs(x - distx) <= RADIUS)
-		?????
+		dsuccesses[gid]++;
 }
 
 
